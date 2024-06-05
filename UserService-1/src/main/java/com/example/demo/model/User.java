@@ -12,7 +12,7 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private int userId;
 	private String fName;
 	private String lName;
 	private LocalDate dateOfBirth;
@@ -21,19 +21,20 @@ public class User {
 	private int pincode;
 	private long adharCardNumber;
 	private long mobileNumber;
-	private String UserName;
+	private String userName;
 	private String password;
 	private String emailId;
 	private int age;
 	private String gender;
 	private LocalDate registerDate;
+	private String policyId;
 
-	public int getId() {
-		return id;
+	public int getUserId() {
+		return userId;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setUserId(int id) {
+		this.userId = id;
 	}
 
 	public String getfName() {
@@ -101,11 +102,11 @@ public class User {
 	}
 
 	public String getUserName() {
-		return UserName;
+		return userName;
 	}
 
 	public void setUserName(String userName) {
-		UserName = userName;
+		userName = userName;
 	}
 
 	public String getPassword() {
@@ -148,16 +149,23 @@ public class User {
 		this.registerDate = registerDate;
 	}
 
-	public User() {
-		super();
-		// TODO Auto-generated constructor stub
+	public String getPolicyId() {
+		return policyId;
 	}
 
-	public User(int id, String fName, String lName, LocalDate dateOfBirth, String address, String city, int pincode,
-			long adharCardNumber, long mobileNumber, String userName, String password, String emailId, int age,
-			String gender, LocalDate registerDate) {
+	public void setPolicyId(String policyId) {
+		this.policyId = policyId;
+	}
+
+	public User() {
 		super();
-		this.id = id;
+	}
+
+	public User(int userId, String fName, String lName, LocalDate dateOfBirth, String address, String city, int pincode,
+			long adharCardNumber, long mobileNumber, String userName, String password, String emailId, int age,
+			String gender, LocalDate registerDate, String policyId) {
+		super();
+		this.userId = userId;
 		this.fName = fName;
 		this.lName = lName;
 		this.dateOfBirth = dateOfBirth;
@@ -166,21 +174,22 @@ public class User {
 		this.pincode = pincode;
 		this.adharCardNumber = adharCardNumber;
 		this.mobileNumber = mobileNumber;
-		UserName = userName;
+		this.userName = userName;
 		this.password = password;
 		this.emailId = emailId;
 		this.age = age;
 		this.gender = gender;
 		this.registerDate = LocalDate.now();
+		this.policyId = policyId;
 	}
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", fName=" + fName + ", lName=" + lName + ", dateOfBirth=" + dateOfBirth
+		return "User [userId=" + userId + ", fName=" + fName + ", lName=" + lName + ", dateOfBirth=" + dateOfBirth
 				+ ", address=" + address + ", city=" + city + ", pincode=" + pincode + ", adharCardNumber="
-				+ adharCardNumber + ", mobileNumber=" + mobileNumber + ", UserName=" + UserName + ", password="
+				+ adharCardNumber + ", mobileNumber=" + mobileNumber + ", userName=" + userName + ", password="
 				+ password + ", emailId=" + emailId + ", age=" + age + ", gender=" + gender + ", registerDate="
-				+ registerDate + "]";
+				+ registerDate + ", policyId=" + policyId + "]";
 	}
 
 }

@@ -2,7 +2,7 @@ package com.example.demo.model;
 
 public class UserDto {
 
-	private Integer id;
+	private Integer userId;
 	private String fName;
 	private String lName;
 	private String address;
@@ -13,12 +13,12 @@ public class UserDto {
 	private int age;
 	private String gender;
 
-	public Integer getId() {
-		return id;
+	public Integer getUserId() {
+		return userId;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setUserId(Integer id) {
+		this.userId = id;
 	}
 
 	public String getfName() {
@@ -95,7 +95,7 @@ public class UserDto {
 
 	@Override
 	public String toString() {
-		return "UserDto [id=" + id + ", fName=" + fName + ", lName=" + lName + ", address=" + address + ", city=" + city
+		return "UserDto [userId=" + userId + ", fName=" + fName + ", lName=" + lName + ", address=" + address + ", city=" + city
 				+ ", pincode=" + pincode + ", mobileNumber=" + mobileNumber + ", emailId=" + emailId + ", age=" + age
 				+ ", gender=" + gender + "]";
 	}
