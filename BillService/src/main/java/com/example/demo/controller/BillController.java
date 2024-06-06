@@ -12,6 +12,8 @@ import com.example.demo.model.Bill;
 import com.example.demo.model.ResponseDto;
 import com.example.demo.service.BillService;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping("/bill")
 public class BillController {
@@ -26,6 +28,7 @@ public class BillController {
 	}
 	
 	@GetMapping("/getbill/{id}")
+	@ApiOperation(value="It will return bill based on bill id.")
 	public ResponseDto getBillById(@PathVariable int id) {
 		ResponseDto responseDto = billService.getBillById(id);
 		return responseDto;
