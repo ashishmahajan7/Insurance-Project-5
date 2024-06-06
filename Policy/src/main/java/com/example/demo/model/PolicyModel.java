@@ -43,7 +43,7 @@ public class PolicyModel {
 		this.policyId = policyId;
 		this.policyType = policyType;
 		this.policyIssueDate = policyIssueDate;
-		this.policyExpiryDate = policyExpiryDate;
+		this.policyExpiryDate = policyIssueDate.plusYears(1);
 		this.policyAmount = policyAmount;
 		this.policyBenefits = policyBenefits;
 		this.policyDescription = policyDescription;

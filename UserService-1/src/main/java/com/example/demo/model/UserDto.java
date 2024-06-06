@@ -47,6 +47,22 @@ public class UserDto {
 	public void setMobileNumber(long mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
+	
+	
+
+	public UserDto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public UserDto(Integer userId, String fName, String lName, String address, long mobileNumber) {
+		super();
+		this.userId = userId;
+		this.fName = fName;
+		this.lName = lName;
+		this.address = address;
+		this.mobileNumber = mobileNumber;
+	}
 
 	@Override
 	public String toString() {
