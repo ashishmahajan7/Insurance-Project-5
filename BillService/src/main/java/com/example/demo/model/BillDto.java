@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 public class BillDto {
 
+
 	private Integer id;
 	private double downPayment;
 	private double balance;

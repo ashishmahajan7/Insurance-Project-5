@@ -19,7 +19,6 @@ public class Payment {
 	private Long billId;
 	private Double amountPaid;
 	private String accountNumber;
-	@JsonFormat(pattern="yyyy/mm/dd")
 	private LocalDate transactionDate;
 	private String modeOfPayment;
 	private String paymentStatus;

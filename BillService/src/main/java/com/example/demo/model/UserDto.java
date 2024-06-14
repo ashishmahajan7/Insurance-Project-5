@@ -95,9 +95,9 @@ public class UserDto {
 
 	@Override
 	public String toString() {
-		return "UserDto [userId=" + userId + ", fName=" + fName + ", lName=" + lName + ", address=" + address + ", city=" + city
-				+ ", pincode=" + pincode + ", mobileNumber=" + mobileNumber + ", emailId=" + emailId + ", age=" + age
-				+ ", gender=" + gender + "]";
+		return "UserDto [userId=" + userId + ", fName=" + fName + ", lName=" + lName + ", address=" + address
+				+ ", city=" + city + ", pincode=" + pincode + ", mobileNumber=" + mobileNumber + ", emailId=" + emailId
+				+ ", age=" + age + ", gender=" + gender + "]";
 	}
 
 }
