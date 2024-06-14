@@ -16,7 +16,7 @@ public class PolicyModel {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int policyId;
+	private long policyId;
 	private String policyType;
 	private LocalDate policyIssueDate;
 	private LocalDate policyExpiryDate;
@@ -37,7 +37,7 @@ public class PolicyModel {
 				+ ", policyPaymentOption=" + policyPaymentOption + "]";
 	}
 
-	public PolicyModel(int policyId, String policyType, LocalDate policyIssueDate, LocalDate policyExpiryDate,
+	public PolicyModel(long policyId, String policyType, LocalDate policyIssueDate, LocalDate policyExpiryDate,
 			long policyAmount, String policyBenefits, String policyDescription, String policyPaymentOption) {
 		super();
 		this.policyId = policyId;
@@ -50,11 +50,11 @@ public class PolicyModel {
 		this.policyPaymentOption = policyPaymentOption;
 	}
 
-	public int getPolicyId() {
+	public long getPolicyId() {
 		return policyId;
 	}
 
-	public void setPolicyId(int policyId) {
+	public void setPolicyId(long policyId) {
 		this.policyId = policyId;
 	}
 

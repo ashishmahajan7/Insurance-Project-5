@@ -17,16 +17,16 @@ public class PolicyService {
 		return policyModel1;
 	}
 	
-	public PolicyModel getPolicy(int id) {
+	public PolicyModel getPolicy(long id) {
 		PolicyModel policyModel2=policyRepo.findById(id);
 		return policyModel2;
 	}
-	public PolicyModel updatePolicy(PolicyModel policy, int policyId) {
+	public PolicyModel updatePolicy(PolicyModel policy, long policyId) {
 		policy.setPolicyId(policyId);
 		return policyRepo.save(policy);
 	}
 
-	public void deleteById(int policyId) {
+	public void deleteById(long policyId) {
 		policyRepo.deleteById(policyId);
 }
 }

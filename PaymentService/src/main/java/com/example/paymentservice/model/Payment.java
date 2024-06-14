@@ -12,14 +12,13 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 public class Payment {
-///
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long paymentId;
 	private Long billId;
 	private Double amountPaid;
 	private String accountNumber;
-	@JsonFormat(pattern="yyyy/mm/dd")
 	private LocalDate transactionDate;
 	private String modeOfPayment;
 	private String paymentStatus;

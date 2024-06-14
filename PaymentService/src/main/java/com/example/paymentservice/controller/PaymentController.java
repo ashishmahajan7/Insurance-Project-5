@@ -11,31 +11,31 @@ import java.util.List;
 @RequestMapping("/payments")
 public class PaymentController {
 
-    @Autowired
-    private PaymentService paymentService;
+	@Autowired
+	private PaymentService paymentService;
 
-    @GetMapping("/getAllPayments")
-    public List<Payment> getAllPayments() {
-        return paymentService.getAllPayments();
-    }
+	@GetMapping("/getAllPayments")
+	public List<Payment> getAllPayments() {
+		return paymentService.getAllPayments();
+	}
 
-    @GetMapping("/getPayment/{id}")
-    public Payment getPaymentById(@PathVariable("id") Long paymentId) {
-        return paymentService.getPaymentById(paymentId);
-    }
+	@GetMapping("/getPayment/{id}")
+	public Payment getPaymentById(@PathVariable("id") Long paymentId) {
+		return paymentService.getPaymentById(paymentId);
+	}
 
-    @PostMapping("/savePayment")
-    public Payment createPayment(@RequestBody Payment payment) {
-        return paymentService.createPayment(payment);
-    }
+	@PostMapping("/savePayment")
+	public Payment createPayment(@RequestBody Payment payment) {
+		return paymentService.createPayment(payment);
+	}
 
-    @PutMapping("/updatePayment/{id}")
-    public Payment updatePayment(@PathVariable("id") Long paymentId, @RequestBody Payment paymentDetails) {
-        return paymentService.updatePayment(paymentId, paymentDetails);
-    }
+	@PutMapping("/updatePayment/{id}")
+	public Payment updatePayment(@PathVariable("id") Long paymentId, @RequestBody Payment paymentDetails) {
+		return paymentService.updatePayment(paymentId, paymentDetails);
+	}
 
-    @DeleteMapping("/deletePayment/{id}")
-    public void deletePayment(@PathVariable("id") Long paymentId) {
-        paymentService.deletePayment(paymentId);
-    }
+	@DeleteMapping("/deletePayment/{id}")
+	public void deletePayment(@PathVariable("id") Long paymentId) {
+		paymentService.deletePayment(paymentId);
+	}
 }

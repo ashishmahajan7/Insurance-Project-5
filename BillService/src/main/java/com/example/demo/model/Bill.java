@@ -9,6 +9,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Bill {
+	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
